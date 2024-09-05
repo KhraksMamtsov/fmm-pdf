@@ -1,0 +1,18 @@
+.fillable-mark {
+  break-inside: avoid;
+  
+  &__header {
+
+  }
+  &__mark {
+    margin-top: 6pt;
+    display: flex;
+    gap: 8pt;
+  }
+  &__mark-item {
+    height: 16pt;
+    width: 16pt;
+    border-radius: 50%;
+    background: #ebebeb;
+  }
+}

@@ -1,0 +1,13 @@
+.fillable-area {
+  break-inside: avoid;
+  
+  &__header {
+
+  }
+  &__area {
+    margin-top: 8pt;
+    aspect-ratio: 3 / 1;
+    border-radius: 6pt;
+    border: 1pt dashed; 
+  }
+}

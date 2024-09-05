@@ -1,0 +1,11 @@
+.paragraph {
+font-family: "IBM Plex Sans", sans-serif;
+font-size: 12pt;
+font-weight: 400;
+line-height: 17pt;
+color: var(--color-text-main);
+
+&--bold{
+  font-weight: 600;
+}
+}

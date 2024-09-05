@@ -1,1 +1,4 @@
-# fmm-pdf
+```
+pnpm install
+pnpm dev
+```

@@ -1,0 +1,9 @@
+.text {
+  font-size: 10pt;
+  line-height: 13pt;
+  color: var(--color-text-main);
+
+  &--bold {
+    font-weight: 600;
+  }
+}

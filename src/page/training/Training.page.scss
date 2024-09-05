@@ -1,0 +1,30 @@
+.training-page {
+  &__body {
+    margin-top: 8pt;
+    display: grid;
+    grid-template-columns: 202fr 342fr;
+    gap: 16pt;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__aside {}
+  &__map {}  
+  
+  &__main {}
+  
+  &__section {
+    display: grid;
+    gap: 16pt;
+    padding-bottom: 16pt;
+
+    &--2col {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    &+& {
+      padding-top: 16pt;
+      border-top: 1pt dashed;
+    }
+  }
+}

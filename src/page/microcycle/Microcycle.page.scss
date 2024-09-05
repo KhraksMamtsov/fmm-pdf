@@ -1,0 +1,10 @@
+.microcycle-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16pt;
+   
+  * {
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,113 @@
+.page {
+  margin: auto;
+  padding: var(--print-margin); //var(--print-margin) calc(var(--print-margin) + 50pt);
+
+  page-break-before: always;
+  break-before: always;
+  // break-inside: avoid;
+
+  outline: 2pt solid red; // for DEV
+  position: relative;
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  gap: 16pt;
+
+  &::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    // left: var(--print-margin);
+    outline: 2pt solid green; // for DEV
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    outline: 2pt solid blue; // for DEV
+  }
+
+  &--vertical {
+    page: vertical;
+    max-width: 210mm ; /* ширина страницы A4 */
+    min-height: 297mm ; /* высота страницы A4 */
+
+    &::before {
+      width: calc(210mm - var(--print-margin) * 2); 
+      height: calc(297mm - var(--print-margin) * 2);
+    }
+  
+    &::after {
+      width: 210mm ; /* ширина страницы A4 */
+      height: 297mm ; /* высота страницы A4 */
+    }
+  }
+  
+  &--horizontal {
+    // page: horizontal; // !!! commented for <tfooter> proper work
+    max-width: 297mm; /* ширина страницы A4 */
+    min-height: 210mm; /* высота страницы A4 */
+
+
+    &::before {
+      width: calc(297mm - var(--print-margin) * 2); 
+      height: calc(210mm - var(--print-margin) * 2);
+    }
+  
+    &::after {
+      width: 297mm; /* ширина страницы A4 */
+      height: 210mm; /* высота страницы A4 */
+    }
+  }
+  
+  &__header {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    position: relative;
+  }
+  &__body {
+    flex-grow: 1;
+  }
+  &__footer {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    position: relative;
+  }
+}
+
+@media print {
+  .page {
+    padding: 0;
+    margin: 0;
+
+    &--vertical {
+      max-width: calc(210mm - var(--print-margin) * 2); 
+      min-height: calc(297mm - var(--print-margin) * 2);
+    }
+
+    &--horizontal {
+      max-width: calc(297mm - var(--print-margin) * 2);
+      min-height: calc(210mm - var(--print-margin) * 2); 
+    }
+
+    &::before, &::after {
+      display: none;
+    }
+  }
+}
+
+.colontitle {
+  display: flex;
+  gap: 24pt;
+  justify-content: space-between;  
+  
+  &__item {}
+
+  & + & {
+    margin-top: 4pt;
+  }
+}

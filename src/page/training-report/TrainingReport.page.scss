@@ -1,0 +1,25 @@
+.training-report-form {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 12pt
+  }
+  &__marks{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24pt
+  }
+  &__marks{
+    flex: 1 0 auto
+  }
+  &__marks-item:nth-child(3n - 2) {
+    justify-self: start; 
+  }
+  &__marks-item:nth-child(3n - 1) {
+    justify-self: center;
+  }
+  &__marks-item:nth-child(3n) {
+    justify-self: end;
+  }
+}

@@ -1,0 +1,16 @@
+.header {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--color-text-main);
+
+  &--1 {
+    font-weight: 600;
+    font-size: 17pt;
+    line-height: 20pt;
+  }
+  
+  &--2 {
+    font-weight: 700;
+    font-size: 12pt;
+    line-height: 17pt;
+  }
+}

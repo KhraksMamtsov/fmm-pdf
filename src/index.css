@@ -1,0 +1,37 @@
+:root {
+  --color-text-main: #000000;
+  --color-text-secondary: #767373;
+  --print-margin: 18pt;
+  -webkit-print-color-adjust: exact;
+}
+
+body {
+  margin: 32pt;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+}
+
+@page {
+  margin: var(--print-margin);
+  
+  /* @bottom-right-corner {
+    font-family: "IBM Plex Sans", sans-serif;
+    text-align: center;
+    font-size: 12pt;
+    content: counter(page);
+  } */
+}
+
+@page vertical {
+  /* see page: vertical; */
+  size: a4;
+}
+@page horizontal {
+  /* see page: horizontal; */
+  size: a4 landscape;
+}

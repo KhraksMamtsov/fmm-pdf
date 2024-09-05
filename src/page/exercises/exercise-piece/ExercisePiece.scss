@@ -1,0 +1,22 @@
+.exercise-piece {
+  display: flex;
+  break-inside: avoid;
+  // grid-template-columns: min-content auto;
+  &__icon {
+    flex: 0 0 auto;
+    width: 24pt;
+    height: 24pt;
+    padding: 4pt 4pt;
+    margin-top: -4pt;
+    box-sizing: border-box;
+  }
+  &__header {}
+  &__text {
+    margin-top: 2pt;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 9pt;
+    color: var(--color-text-main)
+  }
+}

@@ -1,0 +1,14 @@
+.team-section {
+  break-inside: avoid;
+  // position: relative;
+
+  &__header {
+
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: max-content max-content auto;
+    column-gap: 10pt;
+    row-gap: 2pt;
+  }
+}
