@@ -1,4 +1,4 @@
-import { TeamPageProps } from "./Team.page";
+import type { TeamPageProps } from "./Team.page.ts";
 
 export const TeamPageDataTest: TeamPageProps = {
   page: {
