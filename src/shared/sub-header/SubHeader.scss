@@ -1,4 +1,6 @@
 .sub-header {
+  text-wrap: balance;
+  word-break: break-word;
   text-transform: uppercase;
   font-weight: 500;
   color: var(--color-text-secondary);
@@ -6,12 +8,12 @@
   &--normal {
     font-size: 9pt;
     line-height: 13pt;
-    }
+  }
   &--small {
     font-size: 7pt;
     line-height: 8pt;
     letter-spacing: 0.05em;
-    }
+  }
 
   // &--bold {
   //   font-weight: 600;

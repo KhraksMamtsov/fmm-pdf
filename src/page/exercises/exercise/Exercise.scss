@@ -6,9 +6,11 @@
   gap: 8pt;
   color: var(--color-text-main);
   position: relative;
+  text-wrap: balance;
   // overflow: hidden;
 
-  &__header {position: relative;
+  &__header {
+    position: relative;
     font-size: 8pt;
     font-weight: 400;
     line-height: 9pt;
@@ -16,31 +18,37 @@
     gap: 4pt;
   }
 
-  &__header-left {position: relative;
-    flex: 0 0 auto
+  &__header-left {
+    position: relative;
+    flex: 0 0 auto;
   }
-  &__header-right {position: relative;
+  &__header-right {
+    position: relative;
     font-weight: 600;
   }
-  &__main {position: relative;
+  &__main {
+    position: relative;
     padding-top: 4pt;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6pt
+    gap: 6pt;
   }
 
-  &__left {position: relative;
+  &__left {
+    position: relative;
     padding-top: 4pt;
     border-top: 1pt dashed #525252;
   }
 
-  &__right {position: relative;
+  &__right {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 6pt;
   }
 
-  &__image {position: relative;
+  &__image {
+    position: relative;
     max-width: 100%;
     border-radius: 6pt;
     overflow: hidden;

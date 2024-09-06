@@ -91,7 +91,7 @@
     }
 
     &--horizontal {
-      // page: unset; // !!! Ctrl+F: <BUG: HORIZONTAL>
+      page: unset; // !!! Ctrl+F: <BUG: HORIZONTAL>
       max-width: calc(297mm - var(--print-margin) * 2);
       min-height: calc(210mm - var(--print-margin) * 2);
     }

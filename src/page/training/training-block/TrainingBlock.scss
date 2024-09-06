@@ -1,8 +1,9 @@
 .training-block {
   break-inside: avoid;
-  
-  &__header{
+  text-wrap: balance;
+  word-break: break-word;
 
+  &__header {
   }
   &__body {
   }

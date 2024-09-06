@@ -6,6 +6,9 @@
   table-layout: fixed;
   border-collapse: collapse;
   text-align: left;
+  vertical-align: top;
+  text-wrap: balance;
+  word-break: break-word;
 
   &__header-cell {
     padding: 4pt 8pt;
@@ -18,23 +21,23 @@
 
     &--color {
       &-green {
-        border-top: 2px solid #16a084;
+        border-top: 2pt solid #16a084;
         background: #eefbf8;
       }
       &-red {
-        border-top: 2px solid #fd5555;
+        border-top: 2pt solid #fd5555;
         background: #fff1f1;
       }
       &-blue {
-        border-top: 2px solid #005be3;
+        border-top: 2pt solid #005be3;
         background: #edf4ff;
       }
       &-purple {
-        border-top: 2px solid #8e5ad2;
+        border-top: 2pt solid #8e5ad2;
         background: #f4f0f7;
       }
       &-pink {
-        border-top: 2px solid #ed208c;
+        border-top: 2pt solid #ed208c;
         background: #fff5f9;
       }
     }

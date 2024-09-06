@@ -1,7 +1,9 @@
-.filled-area {  
-  &__header {
+.filled-area {
+  text-wrap: balance;
 
+  &__header {
   }
+
   &__area {
     margin-top: 8pt;
   }
