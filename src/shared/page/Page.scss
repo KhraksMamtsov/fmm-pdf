@@ -12,18 +12,18 @@
   flex-direction: column;
   display: flex;
   justify-content: space-between;
-  gap: 16pt;
+  // gap: 16pt;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     pointer-events: none;
     // left: var(--print-margin);
     outline: 2pt solid green; // for DEV
   }
-  
+
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     pointer-events: none;
     top: 0;
@@ -33,46 +33,47 @@
 
   &--vertical {
     page: vertical;
-    max-width: 210mm ; /* ширина страницы A4 */
-    min-height: 297mm ; /* высота страницы A4 */
+    max-width: 210mm; /* ширина страницы A4 */
+    min-height: 297mm; /* высота страницы A4 */
 
     &::before {
-      width: calc(210mm - var(--print-margin) * 2); 
+      width: calc(210mm - var(--print-margin) * 2);
       height: calc(297mm - var(--print-margin) * 2);
     }
-  
+
     &::after {
-      width: 210mm ; /* ширина страницы A4 */
-      height: 297mm ; /* высота страницы A4 */
+      width: 210mm; /* ширина страницы A4 */
+      height: 297mm; /* высота страницы A4 */
     }
   }
-  
+
   &--horizontal {
-    // page: horizontal; // !!! commented for <tfooter> proper work
+    page: horizontal; // !!! Ctrl+F: <BUG: HORIZONTAL> commented for <tfooter> proper work
     max-width: 297mm; /* ширина страницы A4 */
     min-height: 210mm; /* высота страницы A4 */
 
-
     &::before {
-      width: calc(297mm - var(--print-margin) * 2); 
+      width: calc(297mm - var(--print-margin) * 2);
       height: calc(210mm - var(--print-margin) * 2);
     }
-  
+
     &::after {
       width: 297mm; /* ширина страницы A4 */
       height: 210mm; /* высота страницы A4 */
     }
   }
-  
+
   &__header {
     break-inside: avoid;
     page-break-inside: avoid;
     position: relative;
+    margin-bottom: 8pt;
   }
   &__body {
     flex-grow: 1;
   }
-  &__footer {
+  &__super-header {
+    margin-bottom: 8pt;
     page-break-inside: avoid;
     break-inside: avoid;
     position: relative;
@@ -85,16 +86,18 @@
     margin: 0;
 
     &--vertical {
-      max-width: calc(210mm - var(--print-margin) * 2); 
+      max-width: calc(210mm - var(--print-margin) * 2);
       min-height: calc(297mm - var(--print-margin) * 2);
     }
 
     &--horizontal {
+      page: unset; // !!! Ctrl+F: <BUG: HORIZONTAL>
       max-width: calc(297mm - var(--print-margin) * 2);
-      min-height: calc(210mm - var(--print-margin) * 2); 
+      min-height: calc(210mm - var(--print-margin) * 2);
     }
 
-    &::before, &::after {
+    &::before,
+    &::after {
       display: none;
     }
   }
@@ -103,11 +106,29 @@
 .colontitle {
   display: flex;
   gap: 24pt;
-  justify-content: space-between;  
-  
-  &__item {}
+  justify-content: space-between;
+
+  &__item {
+  }
 
   & + & {
     margin-top: 4pt;
+  }
+}
+.colontitle-item {
+  &--right {
+    text-align: right;
+  }
+
+  &__main {
+    display: flex;
+    // align-items: center;
+    gap: 9pt;
+  }
+
+  &__main-icon {
+    flex: 0 0 auto;
+    width: 16pt;
+    height: 16pt;
   }
 }

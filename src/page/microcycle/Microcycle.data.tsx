@@ -2,23 +2,15 @@ import { MicrocyclePageProps } from "./Microcycle.page";
 
 export const MicrocyclePageDataTest: MicrocyclePageProps = {
   columnsPerPage: 7,
+  icon: "battery",
   page: {
     orientation: "horizontal",
     header: {
       main: {
         left: "Прогрессивный контроль для построения, развития и завершения атаки",
+        right: "Cоздано на ffm.kz",
       },
     },
-    // footer: {
-    //   main: {
-    //     left: "Противодействие продвижению атаки",
-    //     right: "Cоздано на ffm.kz",
-    //   },
-    //   sub: {
-    //     left: "31 авг 2024 09:00—10:00",
-    //     right: "1/1",
-    //   },
-    // },
   },
   training: {
     header: [

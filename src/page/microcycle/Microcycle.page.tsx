@@ -1,3 +1,4 @@
+import { Icon, MircocylceIcon } from "../../shared/icon/Icon";
 import { Page, PageProps } from "../../shared/page/Page";
 import "./Microcycle.page.scss";
 import {
@@ -7,6 +8,7 @@ import {
 
 export interface MicrocyclePageProps {
   page: Omit<PageProps, "children">;
+  icon: MircocylceIcon;
   training: TrainingTableProps;
   columnsPerPage: number;
 }
@@ -72,7 +74,7 @@ export const MicrocyclePage = (props: MicrocyclePageProps) => {
   });
 
   return splittenTrainings.map((x, i) => (
-    <Page key={i} {...props.page}>
+    <Page icon={<Icon icon={props.icon} />} key={i} {...props.page}>
       <TrainingTable {...x} />
     </Page>
   ));

@@ -4,16 +4,9 @@ export const TrainingDataTest: TrainingPageProps = {
   page: {
     header: {
       super: { left: "тренировка" },
-      main: { left: "Противодействие продвижению атаки" },
-    },
-    footer: {
       main: {
         left: "Противодействие продвижению атаки",
         right: "Cоздано на ffm.kz",
-      },
-      sub: {
-        left: "Тренировка из базы QJL",
-        right: "1/3",
       },
     },
   },

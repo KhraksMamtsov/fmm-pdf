@@ -5,14 +5,13 @@ export const TrainingReportPageDataTest: TrainingReportPageProps = {
     header: {
       main: { left: "Отчет о тренировке" },
     },
-    footer: {
+    superHeader: {
       main: {
         left: "Противодействие продвижению атаки",
         right: "Cоздано на ffm.kz",
       },
       sub: {
         left: "31 авг 2024 09:00—10:00",
-        right: "1/122",
       },
     },
   },
@@ -20,7 +19,7 @@ export const TrainingReportPageDataTest: TrainingReportPageProps = {
   areas: [
     "Что получилось",
     "Что не получилось",
-    "Что получилось",
-    "Что не получилось",
+    // "Что получилось",
+    // "Что не получилось",
   ],
 };

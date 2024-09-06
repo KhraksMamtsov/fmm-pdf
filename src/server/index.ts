@@ -36,7 +36,7 @@ async function loadLocalFile() {
   });
 
   http
-    .createServer(async (request, response) => {
+    .createServer(async (_request, response) => {
       console.log("генерация pdf");
       await page.evaluate(async (data) => {
         console.log(data);

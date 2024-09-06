@@ -2,7 +2,7 @@ import { ExercisesPageProps } from "./Exerises.page";
 
 export const ExercisesPageDataTest: ExercisesPageProps = {
   page: {
-    footer: {
+    superHeader: {
       main: {
         left: "Противодействие продвижению атаки",
         right: "Cоздано на ffm.kz",
