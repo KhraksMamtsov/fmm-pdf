@@ -23,15 +23,13 @@ function splitProps(options: {
   const { header, body, footer } = props;
 
   // Первый столбец (фиксированный для всех частей)
-  const fixedHeaderColumn = header.map((row) => row[0]); // первый элемент каждой строки заголовка
-  const fixedBodyColumn = body.map((row) => row[0]); // первый элемент каждой строки тела
-  const fixedFooterColumn = footer[0]; // первый элемент футера
+  const fixedHeaderColumn = header.map((row) => row[0]);
+  const fixedBodyColumn = body.map((row) => row[0]);
+  const fixedFooterColumn = footer[0];
 
-  // Массив для хранения новых таблиц
   const splitTables: Array<TrainingTableProps> = [];
 
-  // Разбиение по n колонок для заголовка, тела и футера
-  const totalColumns = header[1].length; // общее количество столбцов (включая первый)
+  const totalColumns = header[1].length;
 
   const steps = Math.ceil((totalColumns - 1) / n);
 

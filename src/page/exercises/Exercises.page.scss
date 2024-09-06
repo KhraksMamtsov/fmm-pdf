@@ -4,13 +4,8 @@
   flex-direction: column;
   gap: 8pt;
 
-  // > *+* {
-  //   margin-top: 8px;
-  // }
-  
   &__section {
-    &+& {
-      // margin-top: 8pt;
+    & + & {
     }
   }
 }
