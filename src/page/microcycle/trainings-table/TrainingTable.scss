@@ -1,35 +1,16 @@
-.training-table {    
+.training-table {
   border: none;
   box-sizing: border-box;
   // width: 800pt;// calc(25pt + 7 * 110pt);
   width: 100%;
   table-layout: fixed;
-  // border-collapse: collapse;
+  border-collapse: collapse;
   text-align: left;
 
   &__header-cell {
-    padding:  4pt 8pt;
-    &:empty {
-      border: none;
-    }
-  }
-  
-  &__body-row {
-    border-top: 1pt solid #ddd;
-  }
-    &__body-cell {
-      padding:  4pt 8pt;
-      // border-top: 1pt solid #ddd;
+    padding: 4pt 8pt;
 
-    &:first-child {
-      border: none;
-    }
-    
-    &:empty {
-      border: none;
-    }
-    
-    &--bold {
+    &--main {
       font-weight: 600;
       font-size: 10pt;
       line-height: 11pt;
@@ -37,25 +18,69 @@
 
     &--color {
       &-green {
-        border-top: 2px solid #16A084;
-        background: #EEFBF8;
+        border-top: 2px solid #16a084;
+        background: #eefbf8;
       }
       &-red {
-        border-top: 2px solid #FD5555;
-        background: #FFF1F1;
+        border-top: 2px solid #fd5555;
+        background: #fff1f1;
       }
       &-blue {
-        border-top: 2px solid #005BE3;
-        background: #EDF4FF;
+        border-top: 2px solid #005be3;
+        background: #edf4ff;
       }
       &-purple {
-        border-top: 2px solid #8E5AD2;
-        background: #F4F0F7;
+        border-top: 2px solid #8e5ad2;
+        background: #f4f0f7;
       }
       &-pink {
-        border-top: 2px solid #ED208C;
-        background: #FFF5F9;
+        border-top: 2px solid #ed208c;
+        background: #fff5f9;
       }
+    }
+
+    &--sub {
+      color: var(--color-text-main);
+      padding: 4pt 8pt;
+      font-size: 7pt;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &:first-child {
+      font-size: 8pt;
+      line-height: 8pt;
+      width: 25pt;
+      padding-left: 0;
+      padding-right: 0;
+      color: #767373;
+      border: none;
+    }
+    &:empty {
+      border: none;
+    }
+  }
+
+  &__body-row {
+  }
+  &__body-cell {
+    border-top: 1pt solid #ddd;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    color: var(--color-text-main);
+    padding: 4pt 8pt;
+    font-size: 7pt;
+    font-weight: 400;
+    line-height: normal;
+
+    &:first-child {
+      padding-left: 0;
+      padding-right: 0;
+      color: #767373;
+    }
+
+    &:empty {
+      border: none;
     }
   }
 
@@ -64,8 +89,8 @@
   }
 
   &__footer-cell {
-    padding:  4pt 8pt;
-    
+    padding: 4pt 8pt;
+
     &:empty {
       border: none;
     }
@@ -78,19 +103,19 @@
   //     width: 110pt;
   //     box-sizing: border-box;
   //     padding:  4pt 8pt;
-      
+
   //     &:first-child {
   //       width: 25pt;
   //     }
 
   //     &--text {
-        
+
   //     }
 
   //     &:empty {
   //       border: none
   //     }
-      
+
   //     &--bold {
   //       font-size: 10pt;
   //       font-weight: 600;
