@@ -39,6 +39,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "Общая продолжительность",
           text: "20 мин.",
+          textIcon: "clock",
         },
         {
           header: "Количество серий",
@@ -51,6 +52,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "продолжительность повторения",
           text: "3 мин.",
+          textIcon: "clock",
         },
         {
           header: "повторений в серии",
@@ -59,6 +61,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "пауза между повторениями",
           text: "3 мин.",
+          textIcon: "clock",
         },
       ],
       rightPieces: [
@@ -106,6 +109,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "Общая продолжительность",
           text: "12 мин.",
+          textIcon: "clock",
         },
         {
           header: "Количество серий",
@@ -114,6 +118,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "продолжительность повторения",
           text: "2 мин.",
+          textIcon: "clock",
         },
         {
           header: "повторений в серии",
@@ -122,6 +127,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "пауза между повторениями",
           text: "1 мин.",
+          textIcon: "clock",
         },
       ],
       rightPieces: [
@@ -169,6 +175,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "Общая продолжительность",
           text: "12 мин.",
+          textIcon: "clock",
         },
         {
           header: "Количество серий",
@@ -177,6 +184,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "продолжительность повторения",
           text: "2 мин.",
+          textIcon: "clock",
         },
         {
           header: "повторений в серии",
@@ -185,6 +193,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "пауза между повторениями",
           text: "1 мин.",
+          textIcon: "clock",
         },
       ],
       rightPieces: [
@@ -232,6 +241,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "Общая продолжительность",
           text: "12 мин.",
+          textIcon: "clock",
         },
         {
           header: "Количество серий",
@@ -240,6 +250,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "продолжительность повторения",
           text: "2 мин.",
+          textIcon: "clock",
         },
         {
           header: "повторений в серии",
@@ -248,6 +259,7 @@ export const ExercisesPageDataTest: ExercisesPageProps = {
         {
           header: "пауза между повторениями",
           text: "1 мин.",
+          textIcon: "clock",
         },
       ],
       rightPieces: [

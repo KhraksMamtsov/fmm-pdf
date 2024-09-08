@@ -34,27 +34,26 @@ export const MicrocyclePageDataTest: MicrocyclePageProps = {
         [
           {
             text: "Упр. 1",
-            bold: true,
           },
           {
             text: "Техника передвижения с мячом",
-            icon: "clock",
+            icon: "timer",
           },
           {
             text: "Динамическая сила с мячом",
-            icon: "clock",
+            icon: "timer",
           },
           {
             text: "Технический маршрут с мячом",
-            icon: "clock",
+            icon: "timer",
           },
           {
             text: "Беговая координация с мячом",
-            icon: "clock",
+            icon: "timer",
           },
           {
             text: "Реакция с мячом",
-            icon: "clock",
+            icon: "timer",
           },
         ],
         [
@@ -94,8 +93,8 @@ export const MicrocyclePageDataTest: MicrocyclePageProps = {
       ],
       [
         [
-          { text: "Упр. 2", bold: true, borderTop: true },
-          { text: "Построение атаки", icon: "case", borderTop: true },
+          { text: "Упр. 2" },
+          { text: "Построение атаки", icon: "case" },
           {
             text: "Единоборства 1×1, 2×2 + вратарь — продвижение атаки",
             icon: "case",
@@ -104,7 +103,7 @@ export const MicrocyclePageDataTest: MicrocyclePageProps = {
             text: "Противодействие продвижению атаки",
             icon: "case",
           },
-          { text: "Проникновение по флангу", icon: "case", borderTop: true },
+          { text: "Проникновение по флангу", icon: "case" },
           {
             text: "Противодействие завершению атаки по центру",
             icon: "case",
@@ -145,7 +144,7 @@ export const MicrocyclePageDataTest: MicrocyclePageProps = {
       ],
       [
         [
-          { text: "Упр. 3", bold: true, borderTop: true },
+          { text: "Упр. 3" },
           {
             text: "Рондо 8×4: построение атаки",
             icon: "arrow",
@@ -202,8 +201,8 @@ export const MicrocyclePageDataTest: MicrocyclePageProps = {
       ],
       [
         [
-          { text: "Упр. 4", bold: true, borderTop: true },
-          { text: "Построение атаки 8×4", icon: "goal", borderTop: true },
+          { text: "Упр. 4" },
+          { text: "Построение атаки 8×4", icon: "goal" },
           {
             text: "Продвижение атаки: 3+вратарь × 2",
             icon: "goal",
@@ -256,8 +255,8 @@ export const MicrocyclePageDataTest: MicrocyclePageProps = {
       ],
       [
         [
-          { text: "Упр. 5", bold: true, borderTop: true },
-          { text: "Игра 9×9: построение игры", icon: "ball", borderTop: true },
+          { text: "Упр. 5" },
+          { text: "Игра 9×9: построение игры", icon: "ball" },
           {
             text: "Игра 6×6: продвижение атаки",
             icon: "ball",

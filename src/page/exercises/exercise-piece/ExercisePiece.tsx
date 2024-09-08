@@ -1,4 +1,4 @@
-import { ExerciseIcon, Icon } from "../../../shared/icon/Icon";
+import { ClockIcon, ExerciseIcon, Icon } from "../../../shared/icon/Icon";
 import { SubHeader } from "../../../shared/sub-header/SubHeader";
 import "./ExercisePiece.scss";
 
@@ -6,7 +6,7 @@ export interface ExercisePieceProps {
   icon?: ExerciseIcon;
   header: string;
   text: string;
-  textIcon?: React.ReactNode;
+  textIcon?: ClockIcon;
 }
 
 export const ExercisePiece = (props: ExercisePieceProps) => (
@@ -22,7 +22,9 @@ export const ExercisePiece = (props: ExercisePieceProps) => (
       </div>
       <div className="exercise-piece__body">
         {!props.textIcon ? null : (
-          <div className="exercise-piece__text-icon">{props.textIcon}</div>
+          <div className="exercise-piece__text-icon">
+            <Icon icon={props.textIcon} />
+          </div>
         )}
         <div className="exercise-piece__text">{props.text}</div>
       </div>
