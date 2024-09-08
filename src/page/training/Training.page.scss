@@ -44,11 +44,12 @@
   &__list {
   }
   &__item {
+    display: flex;
+    gap: 4pt;
+
     & + & {
       margin-top: 8pt;
     }
-    display: flex;
-    gap: 4pt;
   }
   &__item-icon {
     flex: 0 0 auto;

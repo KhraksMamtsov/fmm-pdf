@@ -13,7 +13,7 @@
   }
   &__piece {
     position: absolute;
-    width: 24 / 272 * 100%;
+    width: calc(24 / 272 * 100%);
   }
 }
 

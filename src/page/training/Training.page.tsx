@@ -43,7 +43,7 @@ export const TrainingPage = (props: TrainingPageProps) => (
                 </div>
                 <div className="training-exercises__list">
                   {props.side.exercises.list.map((x, i) => (
-                    <div className="training-exercises__item">
+                    <div key={i} className="training-exercises__item">
                       <div className="training-exercises__item-icon">
                         <Icon icon={x.icon} />
                       </div>
