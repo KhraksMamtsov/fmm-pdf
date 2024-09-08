@@ -4,16 +4,16 @@ import clsx from "clsx";
 
 export interface ExercisesTableProps {
   header: ReadonlyArray<{ text: string | null }>;
-  body: Array<
-    [
-      { text: string; borderTop?: boolean; bold?: boolean },
-      ...Array<{
-        text: string | null;
-        bold?: boolean;
-        borderTop?: boolean;
-        icon?: ExerciseIcon;
-      }>
-    ]
+  body: ReadonlyArray<
+    ReadonlyArray<
+      [
+        { text: string },
+        ...ReadonlyArray<{
+          text: string | null;
+          icon?: ExerciseIcon;
+        }>
+      ]
+    >
   >;
   footer: ReadonlyArray<{ text: string | null }>;
 }
@@ -30,45 +30,38 @@ export const ExercisesTable = (props: ExercisesTableProps) => {
           ))}
         </tr>
       </thead>
-      <tbody className="exercises-table__body">
-        {props.body.map((row, rowIndex) => {
-          const [first, ...rest] = row;
-          return (
-            <tr key={rowIndex} className="exercises-table__body-row">
-              <td
-                className={clsx("exercises-table__body-cell", {
-                  "exercises-table__body-cell--border-top":
-                    first.borderTop ?? false,
-                  "exercises-table__body-cell--bold": first.bold ?? false,
-                })}
-              >
-                {first.text}
-              </td>
-              {rest.map((cell, i) => (
-                <td
-                  key={i}
-                  className={clsx("exercises-table__body-cell", {
-                    "exercises-table__body-cell--border-top":
-                      cell.borderTop ?? false,
-                    "exercises-table__body-cell--bold": cell.bold ?? false,
-                  })}
-                >
-                  <div className="exercises-table__body-cell-content">
-                    {!cell.icon ? null : (
-                      <div className="exercises-table__body-cell-icon">
-                        <Icon icon={cell.icon} />
-                      </div>
-                    )}
-                    <div className="exercises-table__body-cell-text">
-                      {cell.text}
-                    </div>
-                  </div>
+      {props.body.map((bigRow, bigRowIndex) => (
+        <tbody key={bigRowIndex} className="exercises-table__body">
+          {bigRow.map((row, rowIndex) => {
+            const [first, ...rest] = row;
+            return (
+              <tr key={rowIndex} className="exercises-table__body-row">
+                <td className={clsx("exercises-table__body-cell", {})}>
+                  {first.text}
                 </td>
-              ))}
-            </tr>
-          );
-        })}
-      </tbody>
+                {rest.map((cell, i) => (
+                  <td
+                    key={i}
+                    className={clsx("exercises-table__body-cell", {})}
+                  >
+                    <div className="exercises-table__body-cell-content">
+                      {!cell.icon ? null : (
+                        <div className="exercises-table__body-cell-icon">
+                          <Icon icon={cell.icon} />
+                        </div>
+                      )}
+                      <div className="exercises-table__body-cell-text">
+                        {cell.text}
+                      </div>
+                    </div>
+                  </td>
+                ))}
+              </tr>
+            );
+          })}
+        </tbody>
+      ))}
+
       <tfoot className="exercises-table__footer">
         <tr className="exercises-table__footer-row">
           {props.footer.map((x, i) => (
@@ -93,7 +86,7 @@ export function splitExercisesTableProps(options: {
 
   // Первый столбец (фиксированный для всех частей)
   const fixedHeaderColumn = header[0];
-  const fixedBodyColumn = body.map((row) => row[0]);
+  // const fixedBodyColumn = body.map((row) => row[0]);
   const fixedFooterColumn = footer[0];
 
   const splitTables: Array<ExercisesTableProps> = [];
@@ -108,12 +101,15 @@ export function splitExercisesTableProps(options: {
       currentHeaderColumns.push({ text: null });
     }
 
-    const currentBodyColumns = body.map((row, rowIndex) => {
-      const bodyRow = row.slice(cursor, cursor + n);
-      while (bodyRow.length < n) {
-        bodyRow.push({ text: null });
-      }
-      return [fixedBodyColumn[rowIndex], ...bodyRow];
+    const currentBodyColumns = body.map((bigRow) => {
+      const fixedBodyColumn = bigRow.map((row) => row[0]);
+      return bigRow.map((row, rowIndex) => {
+        const bodyRow = row.slice(cursor, cursor + n);
+        while (bodyRow.length < n) {
+          bodyRow.push({ text: null });
+        }
+        return [fixedBodyColumn[rowIndex], ...bodyRow];
+      });
     });
 
     const currentFooterColumns = footer.slice(cursor, cursor + n);

@@ -1,4 +1,6 @@
 .exercises-table {
+  $block: ".exercises-table";
+
   border: none;
   box-sizing: border-box;
   // width: 800pt;// calc(25pt + 7 * 110pt);
@@ -26,9 +28,19 @@
     }
   }
 
-  &__body-cell {
+  &__body {
     page-break-inside: avoid;
     break-inside: avoid;
+    border-top: 1pt solid #ddd;
+  }
+
+  &__body-row:first-child {
+    #{$block}__body-cell:first-child {
+      font-weight: 600;
+    }
+  }
+
+  &__body-cell {
     color: var(--color-text-main);
     padding: 4pt 8pt;
     font-size: 7pt;
@@ -39,15 +51,6 @@
       padding-left: 0;
       padding-right: 0;
       color: #767373;
-    }
-
-    &--bold {
-      font-weight: 600;
-    }
-
-    &--border-top {
-      border-top: 1pt solid #ddd;
-      // page-break-before: always;
     }
 
     &:empty {

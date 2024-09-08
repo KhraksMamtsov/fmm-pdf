@@ -30,7 +30,7 @@ export const MicrocyclePage = (props: MicrocyclePageProps) => {
     props: props.exercises,
     n: props.columnsPerPage,
   });
-
+  console.log(splittenExercises);
   return (
     <>
       {splittenExercises.map((x, i) => (
