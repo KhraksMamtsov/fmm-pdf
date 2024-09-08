@@ -1,11 +1,20 @@
 .paragraph {
-font-family: "IBM Plex Sans", sans-serif;
-font-size: 12pt;
-font-weight: 400;
-line-height: 17pt;
-color: var(--color-text-main);
+  font-family: "IBM Plex Sans", sans-serif;
 
-&--bold{
-  font-weight: 600;
-}
+  font-weight: 400;
+  color: var(--color-text-main);
+
+  &--bold {
+    font-weight: 600;
+  }
+
+  &--normal {
+    font-size: 12pt;
+    line-height: 17pt;
+  }
+
+  &--small {
+    font-size: 10pt;
+    line-height: 12px;
+  }
 }

@@ -1,0 +1,51 @@
+.training-map {
+  break-inside: avoid;
+  text-wrap: balance;
+  word-break: break-word;
+  overflow: hidden;
+  border-radius: 6pt;
+  background: #8de09f;
+
+  position: relative;
+  aspect-ratio: 272 / 410;
+
+  &__header {
+  }
+  &__piece {
+    position: absolute;
+    width: 24 / 272 * 100%;
+  }
+}
+
+.training-map-piece {
+  width: 100%;
+  aspect-ratio: 1;
+  margin: -50%;
+  border-radius: 50%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  container-type: size;
+
+  &--top {
+    color: black;
+    background: #ff8178;
+  }
+
+  &--bottom {
+    color: white;
+    background: #145de0;
+  }
+
+  &--border {
+    outline: 2pt solid black;
+    outline-offset: 1pt;
+  }
+
+  &__number {
+    position: relative;
+    font-size: 50cqw;
+    word-break: keep-all;
+  }
+}

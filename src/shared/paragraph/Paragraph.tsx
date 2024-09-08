@@ -1,9 +1,13 @@
 import "./Paragraph.scss";
 import clsx from "clsx";
 
-export const Paragraph = (props: { children?: string; bold?: boolean }) => (
+export const Paragraph = (props: {
+  children?: string;
+  bold?: boolean;
+  size?: "normal" | "small";
+}) => (
   <p
-    className={clsx("paragraph", {
+    className={clsx("paragraph", `paragraph--${props.size ?? "normal"}`, {
       "paragraph--bold": props.bold ?? false,
     })}
   >

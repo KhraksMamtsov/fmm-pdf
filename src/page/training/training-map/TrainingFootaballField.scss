@@ -1,0 +1,13 @@
+.training-football-field {
+  &__section {
+    fill: #8de09f;
+
+    &--dark {
+      fill: #75c887;
+    }
+
+    &--light {
+      fill: #8de09f;
+    }
+  }
+}

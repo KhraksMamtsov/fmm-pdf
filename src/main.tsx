@@ -18,10 +18,10 @@ import { MicrocyclePageDataTest } from "./page/microcycle/Microcycle.data.tsx";
 
 export const TestApp = (
   <StrictMode>
+    <TrainingPage {...TrainingDataTest} />
     <MicrocyclePage {...MicrocyclePageDataTest} />
     <ExercisesPage {...ExercisesPageDataTest} />
     <TrainingReportFilledPage {...TrainingReportFilledPageDataTest} />
-    <TrainingPage {...TrainingDataTest} />
     <TeamPage {...TeamPageDataTest} />
     <TrainingReportPage {...TrainingReportPageDataTest} />
   </StrictMode>

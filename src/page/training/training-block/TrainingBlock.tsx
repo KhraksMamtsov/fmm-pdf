@@ -4,7 +4,7 @@ import "./TrainingBlock.scss";
 
 export interface TrainingBlockProps {
   header: string;
-  children: string;
+  text: string;
 }
 
 export const TrainingBlock = (props: TrainingBlockProps) => (
@@ -13,7 +13,7 @@ export const TrainingBlock = (props: TrainingBlockProps) => (
       <SubHeader>{props.header}</SubHeader>
     </div>
     <div className="training-block__body">
-      <Paragraph>{props.children}</Paragraph>
+      <Paragraph>{props.text}</Paragraph>
     </div>
   </div>
 );
